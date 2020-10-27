@@ -11,7 +11,7 @@
 }
 
 @font-face {
-    / back-up / font-family: 'sofia-light-reg';
+    font-family: 'sofia-light-reg';
     src: url('sofia_sans/sofiapro-light-webfont.woff2') format('woff2'), url('sofia_sans/sofiapro-light-webfont.woff') format('woff');
 }
 
