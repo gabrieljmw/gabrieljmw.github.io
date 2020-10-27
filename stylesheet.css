@@ -1,0 +1,488 @@
+:root {
+    font-size: 16px;
+    --header-size: 18px;
+    --std-size: 15px;
+    --tag-size: 10px;
+    --credit-size: 0.8rem;
+    --dark-grey: #595959;
+    --blue: #66B7E3;
+    --dark-grey-rgba: rgba(112, 112, 112, 0.70);
+    /*#707070 @ 80%*/
+}
+
+@font-face {
+    / back-up / font-family: 'sofia-light-reg';
+    src: url('sofia_sans/sofiapro-light-webfont.woff2') format('woff2'), url('sofia_sans/sofiapro-light-webfont.woff') format('woff');
+}
+
+
+/*----GENERAL----*/
+
+body,
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.highlight-red {
+    color: #FF9595;
+}
+
+.tag.html {
+    background-color: #F3AD8E;
+}
+
+.tag.css {
+    background-color: #87C2E2;
+}
+
+.tag.bootstrap {
+    background-color: #B19BCB;
+}
+
+.tag.sass {
+    background-color: #DEADC6;
+}
+
+.tag.js {
+    background-color: #F4C794;
+}
+
+.tag.jquery {
+    background-color: #7EADCF;
+}
+
+.tag.php {
+    background-color: #C6C9DC;
+}
+
+.tag.mysql {
+    background-color: #7BAABE;
+}
+
+.tag.java {
+    background-color: #EB9291;
+}
+
+.body {
+    font-family: 'sofia-light-reg', sans-serif;
+    background-color: #F0F2F5;
+    color: var(--dark-grey-rgba);
+    font-style: normal;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+
+/*---PROFILE--*/
+
+.profile {
+    box-shadow: 1px 0px 8px rgba(0, 0, 0, .24), 1px 0px 1px hsla(0, 0%, 43.9%, .05);
+    background-color: #FFFFFF;
+    position: fixed;
+    width: 290px;
+    height: 100%;
+    z-index: 999;
+}
+
+.profile .profile-inner {
+    padding: 20px;
+}
+
+
+/*---PROFILE--IMAGE---*/
+
+.profile .profile-inner .introduction img {
+    margin: 45px auto 30px;
+    border-radius: 18px;
+    display: block;
+    box-shadow: 0 0 0 4px hsl(0, 0%, 100%), 0px 1px 3px 3px rgba(0, 0, 0, .20);
+}
+
+
+/*----PROFILE-TEXT-----*/
+
+.profile .profile-inner .introduction .profile-description {
+    text-align: center;
+}
+
+.profile .profile-inner .introduction .profile-description h1 {
+    font-size: var(--header-size);
+    color: var(--dark-grey);
+    font-weight: 500;
+    margin-bottom: 1.1rem;
+}
+
+.profile .profile-inner .introduction .profile-description h1 span {
+    font-size: var(--std-size);
+    color: #949494;
+    padding-top: 4px;
+    letter-spacing: .3px;
+    font-style: italic;
+    display: block;
+}
+
+
+/* .profile .profile-inner .introduction .profile-description .divider{
+	display: flex;
+	justify-content: center;
+} */
+
+.profile .profile-inner .introduction .profile-description .divider .circle {
+    width: 7px;
+    height: 7px;
+    margin: 0px 5px;
+    border-radius: 30px;
+    background-color: rgba(112, 112, 112, 0.15);
+}
+
+.profile .profile-inner .introduction .profile-description p {
+    line-height: 25px;
+    margin-top: 12px;
+    padding: 0px 10px;
+    font-weight: 400;
+    letter-spacing: .1px;
+    font-size: var(--std-size);
+    color: #757575;
+}
+
+
+/*------PROFILE-SKILLS--------*/
+
+.profile .profile-inner .skills {
+    position: relative;
+    margin-top: 40px;
+    border-radius: 6px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.01);
+}
+
+.profile .profile-inner .skills ul {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.profile .profile-inner .skills ul .tag {
+    padding: 6px 14px;
+    margin: 5px;
+    color: white;
+    list-style-type: none;
+    /* border: 1.5px solid #FFFFFF; Border (1.5px) was not giving a 1:1 representation of design*/
+    border-radius: 4px;
+    font-size: var(--tag-size);
+    font-weight: 500;
+    /*   box-shadow: 
+	0 0 0 1.5px hsl(0, 0%, 100%),
+    0px 2px 8px rgba(0,0,0,.20); */
+}
+
+.profile .profile-inner .skills ul .tag:nth-child(-n+3) {
+    margin-top: 0px;
+    /*first 3 ; last 3*/
+}
+
+.profile .profile-inner .skills ul .tag:nth-last-child(-n+3) {
+    margin-bottom: 0px;
+}
+
+
+/* will enable when I inevitably add more skills*/
+
+
+/* .profile .profile-inner .skills .viewmore{
+	position: absolute;
+    background-color: transparent;
+    border: none;
+    right: 20px;
+    bottom: 10px;
+    font-size: .9rem;
+    cursor: pointer;
+    outline: none;
+    color: rgba(112,112,112,0.35);
+    transition: .3s;
+} */
+
+
+/* .profile .profile-inner .skills .viewmore:hover{
+    color: rgba(112,112,112,0.80);
+    text-shadow: 0px .5px 3px rgba(0,0,0,.1);
+    font-size: .95rem;
+    transition: .3s;
+} */
+
+.profile .profile-inner .skills:hover .skills-title {
+    opacity: .8;
+}
+
+.profile .profile-inner .skills .skills-title {
+    position: absolute;
+    top: -38px;
+    left: 92px;
+    font-size: .8rem;
+    color: rgba(0, 0, 0, .2);
+    opacity: 0;
+    transition: .1s;
+}
+
+
+/*---PROFILE-FOOTER----*/
+
+.profile .profile-footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+
+/*-----SOCIAL-LINKS-------*/
+
+.profile .social {
+    padding: 14px 65px;
+    background-color: #A4D4ED;
+}
+
+.profile .social ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+.profile .social ul li i {
+    font-size: 20px;
+    color: #ffffff;
+    transition: .2s;
+}
+
+.profile .social ul li i:hover {
+    color: #5a7694;
+}
+
+.profile .credit {
+    text-align: center;
+    padding: 8px;
+    background-color: #707070;
+}
+
+.profile .credit i {
+    color: #FF8989;
+    padding: 0px 5px;
+}
+
+.profile .credit p {
+    margin: 0;
+    font-size: var(--credit-size);
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+/*---SECTION-HIGHLIGHT----*/
+
+.section-highlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 10px;
+    background-color: #7fbee0eb;
+    z-index: 99;
+    box-shadow: 0px 0px 2px;
+}
+
+
+/*------POSTS-----*/
+
+.posts {
+    margin: 0 5px 10px 300px;
+    padding-top: 14px;
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 350px;
+}
+
+.posts .post {
+    position: relative;
+    /* 	box-shadow: 
+	0px 0px 1px rgba(0,0,0,.2),
+	0px 0px 1px hsla(0,0%,43.9%,.1); */
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 5px;
+    height: 343px;
+    padding: 16px;
+    flex: 1 0 350px;
+    overflow-y: hidden;
+    transition: .3s;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .10)
+}
+
+.posts .post:hover {
+    transition: .5s;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .15), 0px 0px 1px hsla(0, 0%, 43.9%, .2);
+}
+
+.posts .post .demo {
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 1px;
+    padding: 6px 10px;
+    border: 4px solid #ffffff;
+    border-radius: 3px;
+    position: absolute;
+    font-weight: 500;
+    right: 38px;
+    top: 36px;
+    opacity: 0;
+    transition: .9s;
+    font-size: 14px;
+}
+
+.posts .post .demo .fa-desktop {
+    padding-right: 10px;
+}
+
+.posts .post:hover .demo {
+    opacity: 1;
+}
+
+.posts .post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px 0.5px rgba(0, 0, 0, .2);
+    transition: .3s;
+}
+
+.posts .post:hover img {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.posts .post .post-content {
+    font-size: var(--std-size);
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    bottom: -200px;
+    transition: .4s;
+    left: 12px;
+    right: 0px;
+    z-index: 5;
+    /*fix for tilt.js*/
+}
+
+.posts .post:hover .post-content {
+    bottom: 5px;
+}
+
+.posts .post .post-content h2 {
+    font-size: var(--header-size);
+    color: var(--dark-grey);
+    margin: 0px 0px 8px;
+    padding-top: 15px;
+    font-weight: 500;
+}
+
+.posts .post .post-content .post-description a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.posts .post .post-content .post-description a i {
+    font-size: 12px;
+    padding: 0px 10px;
+    color: var(--blue);
+}
+
+.posts .post .post-content .post-description p {
+    margin: 2px 0px 16px;
+    padding-right: 10px;
+}
+
+.posts .post .post-content .tags ul {
+    display: flex;
+    list-style-type: none;
+    flex-flow: row nowrap;
+    padding-bottom: 20px;
+}
+
+.posts .post .post-content .tags ul .tag {
+    color: #66b7e3;
+    border: 1px solid #66b7e3;
+    padding: 5px 15px;
+    font-size: var(--tag-size);
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.desc-wrap {
+    padding: 0px 20px;
+}
+
+@media screen and (max-width:740px) {
+    @keyframes slideIn {
+        from {
+            bottom: 0;
+        }
+        to {
+            bottom: 180px;
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .posts .post .post-content .post-description a i {
+        padding-left: 0;
+    }
+}
+
+
+/*
+*
+* 
+*
+* END
+*
+*
+*
+*/
+
+
+/* Wobble Vertical https://ianlunn.github.io/Hover/#effects */
+
+@keyframes hvr-wobble-vertical {
+    16.65% {
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);
+    }
+    33.3% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+    49.95% {
+        -webkit-transform: translateY(1px);
+        transform: translateY(1px);
+    }
+    66.6% {
+        -webkit-transform: translateY(-1px);
+        transform: translateY(-1px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.hvr-wobble-vertical:hover,
+.hvr-wobble-vertical:focus,
+.hvr-wobble-vertical:active {
+    -webkit-animation-name: hvr-wobble-vertical;
+    animation-name: hvr-wobble-vertical;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
